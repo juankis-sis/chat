@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chat juankis</title>
+    <!-- boostrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+       <!-- font awesome iconos -->
+       <script src="https://kit.fontawesome.com/667869b4cb.js" crossorigin="anonymous"></script>
+    <!-- mi css -->
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    
+    <nav class="navbar navbar-light bg-danger " style="background: #333333;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #dd1818, #333333);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #dd1818, #333333); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    ">
+        <a class="navbar-brand mx-auto" href="/" style="color: white; "><h2> Biblioteca Cemse - Alto lima</h2></a>
+    </nav>
+
+    <div class="card col-md-4 mt-5 mx-auto" id="nickWrap" style="background: #333333;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #dd1818, #333333);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #dd1818, #333333); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    " >
+        <div class="card-header" >
+            <h3 style="color: white;">ingresa tu nombre</h3>
+        </div>
+        <p id="nickError"></p>
+        <div class="card-body">
+            <form id="nickForm">
+                <input type="text" id="nickname" class="form-control" >
+                <button type="submit" class="btn btn-danger mt-2" > <i class="fas fa-location-arrow"></i> enviar </button>
+            </form>
+        </div>
+
+    </div>
+
+    <div class="container" id="contentWrap" >
+        <div class="row mt-2"  >
+            <div class="col-md-6 offset-md-1 ">
+                <div class="card" style="background: #333333;  /* fallback for old browsers */
+                background: -webkit-linear-gradient(to left, #dd1818, #333333);  /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to left, #dd1818, #333333); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                " >
+                    <div class="card-header">
+                        <h4 style="color: white;">vamos a chatear</h4>
+                    </div>
+    
+                    <div id="chat" class="card-body"></div>
+                    <form id="message-form" class="card-footer" >
+                        <div class="input-group">
+                            <input type="text" id="message" class="form-control">
+                        <div class="input-group-append">
+                            <button type="submit" class="btn btn-danger"> <i class="fas fa-location-arrow"></i> enviar </button>
+                            
+                        </div>
+                        </div>
+                    </form>
+    
+                </div>
+            </div>
+            <div class="card col-md-3" style="background: #333333;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to left, #dd1818, #333333);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to left, #dd1818, #333333); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            ">
+                <div class="card-header">
+                    <h3 style="color: white;">usuarios</h3>
+                </div>
+                <div class="card-body" >
+                    <div id="usernames"></div>
+    
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src="http://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+    <script src="/socket.io/socket.io.js "></script>
+    <script src="/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+</body>
+</html>
