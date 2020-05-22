@@ -42,7 +42,7 @@ $(function(){
     });
 
     socket.on('new message',function (data){
-        $chat.append('<b >' + data.nick + '</b>: '+ data.msg + '<br/>');
+        $chat.append('<b style="color:white;" :>' + data.nick + ' :</b :> '+'<b style="color:white;">'+ data.msg + '<br/>');
 
     });
     socket.on('usernames',data =>{ 

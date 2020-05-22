@@ -1,6 +1,8 @@
 
 body{
-    background-image: url(/img/fondo2.jpg);
+
+    background-image: url(/img/fondo8.jpg);
+    background-repeat: no-repeat;
     
     
      
@@ -9,6 +11,8 @@ body{
     display: none;
 }
 .error{
+
+
     color: red;
 }
 .whisper{
